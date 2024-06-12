@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Success Popup</title>
+<style>
+    /* CSS cho popup */
+    .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #ffffff;
+        padding: 20px;
+        border: 1px solid #000000;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        z-index: 9999;
+    }
+</style>
+</head>
+<body>
+
+<!-- Popup div -->
+<div id="loginSuccessPopup" class="popup">
+    <p>Đăng nhập thành công!</p>
+</div>
+
+<!-- Button để mở popup -->
+<button onclick="showPopup()">Đăng nhập</button>
+
+<script>
+    // Function để hiển thị popup
+    function showPopup() {
+        var popup = document.getElementById("loginSuccessPopup");
+        popup.style.display = "block";
+        // Tự động đóng popup sau 3 giây
+        setTimeout(function() {
+            popup.style.display = "none";
+        }, 3000);
+    }
+</script>
+
+</body>
+</html>
